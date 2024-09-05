@@ -22,6 +22,20 @@ export const columns: ColumnDef<Appointment>[] = [
     ),
   },
   {
+    accessorKey: "phoneNumber",
+    header: "Phone Number",
+    cell: ({ row }) => (
+      <p className="text-14-medium">{row.original.patient.phone}</p>
+    ),
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+    cell: ({ row }) => (
+      <p className="text-14-medium">{row.original.patient.email}</p>
+    ),
+  },
+  {
     accessorKey: "status",
     header: "Status",
     cell: ({ row }) => (
